@@ -1,0 +1,134 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: red;
+    overflow: hidden;
+}
+
+.gameContainer {
+    background-image: url(bg.jpg);
+    background-repeat: no-repeat;
+    background-size: 100vw 100vh;
+    width: 100%;
+    height: 100vh;
+
+}
+
+.gameOver {
+    position: relative;
+    top: 63px;
+    font-size: 53px;
+    font-size: 53px;
+    text-align: center;
+    visibility: hidden;
+    font-family: sans-serif;
+}
+
+#scoreCount {
+    position: absolute;
+    left: 23px;
+    top: 23px;
+    border: 2px solid greenyellow;
+    width: 112px;
+    height: 52px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: sans-serif;
+
+
+}
+
+.dino {
+    background-image: url(dino.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 223px;
+    height: 114px;
+    position: absolute;
+    bottom: 0;
+    left: 52px;
+
+}
+
+.obstacle {
+    background-image: url(dragon.png);
+    background-size: cover;
+    width: 166px;
+    height: 113px;
+    position: absolute;
+    bottom: 0;
+    left: 44vw;
+
+
+}
+
+.animateDino {
+    animation: dino 1s linear;
+
+}
+
+.gameOver {
+    visibility: hidden;
+}
+
+/* @keyframes dino {
+    0% {
+        bottom: 0;
+
+    }
+
+    50% {
+
+        bottom: 422px;
+    }
+
+    100% {
+        bottom: 0;
+    }
+
+} */
+/* public/style.css */
+
+/* ... (other CSS) ... */
+
+@keyframes dino {
+    0% {
+        /* bottom: 0; <--- REMOVE THIS */
+        transform: translateY(0);
+        /* START at ground level */
+    }
+
+    50% {
+        /* bottom: 402px; <--- REMOVE THIS */
+        transform: translateY(-402px);
+        /* MOVE UP -402px (the peak height) */
+    }
+
+    100% {
+        /* bottom: 0; <--- REMOVE THIS */
+        transform: translateY(0);
+        /* END back at ground level */
+    }
+}
+
+/* ... (rest of style.css, including obstacle1 keyframes) ... */
+
+.obstacleAni {
+    animation: obstacleAni 5s linear infinite;
+}
+
+@keyframes obstacleAni {
+    0% {
+        left: 100vw;
+    }
+
+    100% {
+        left: -10vw
+    }
+
+}
