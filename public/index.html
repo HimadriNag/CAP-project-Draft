@@ -1,25 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Running Game</title>
-    <link rel="stylesheet" href="style.css">
-   
-</head>
-<body>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
     <div class="gameContainer">
-        <div class="gameOver" style="color: greenyellow;">
-            Game Over <br><br>
-            
-            Reload To play Again
-        </div>
-        <div class="dino"></div>
-        <div id="scoreCount" style="color: greenyellow;">Your Score:0</div>
-        <div class="obstacle obstacleAni"></div>
+      <div class="gameOver" style="color: greenyellow">
+        Game Over <br /><br />
+
+        Reload To play Again
+      </div>
+      <div class="dino"></div>
+      <div id="scoreCount" style="color: greenyellow">Your Score:0</div>
+      <div class="obstacle obstacleAni"></div>
+      <!-- On-screen jump button (useful for touch devices) -->
+      <button id="jumpBtn" aria-label="Jump">▲</button>
     </div>
-<script src="script.js"></script>
-<script src="/socket.io/socket.io.js"></script> 
-    
-</body>
+    <!-- Load Socket.IO client first so `io()` is available to our script -->
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="script.js"></script>
+  </body>
 </html>
