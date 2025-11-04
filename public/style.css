@@ -62,7 +62,7 @@ body {
 }
 
 .animateDino {
-  animation: dino 1s linear;
+  animation: dino 1.8s linear;
 }
 
 .gameOver {
