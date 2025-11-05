@@ -86,10 +86,10 @@ function gameLoop() {
   const dinoRect = dino.getBoundingClientRect();
 
   const collision =
-    dinoRect.left < obstacleRect.right &&
-    dinoRect.right > obstacleRect.left &&
-    dinoRect.top < obstacleRect.bottom &&
-    dinoRect.bottom > obstacleRect.top;
+    dinoRect.left <= obstacleRect.right &&
+    dinoRect.right >= obstacleRect.left &&
+    dinoRect.top <= obstacleRect.bottom &&
+    dinoRect.bottom >= obstacleRect.top;
 
   if (collision) {
     console.log("GAME OVER: Collision Detected!");
